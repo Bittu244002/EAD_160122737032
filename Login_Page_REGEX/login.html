@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="loginform">
+      <div class="logs">
+        <h2>Login Form</h2>
+      </div>
+      <hr />
+      <div class="username">
+        <label>Username | Email</label>
+        <br />
+        <input type="text" id="email" placeholder="Enter your email" />
+      </div>
+      <div class="password">
+        <label>Password</label>
+        <br />
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+        />
+      </div>
+      <div class="remember">
+        <input type="radio" class="Remember" value="True" />
+        <label for="Remember" class="remember">Remember Me</label>
+      </div>
+      <div class="submit">
+        <button id="submitBtn">Submit</button>
+      </div>
+    </div>
+
+    <script>
+      const passwordRegex =
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+      const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+      document
+        .getElementById("submitBtn")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+          }
+
+          if (!passwordRegex.test(password)) {
+            alert(
+              "Password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, a number, and a special character."
+            );
+            return;
+          }
+
+          alert("Login successful");
+        });
+    </script>
+  </body>
+</html>

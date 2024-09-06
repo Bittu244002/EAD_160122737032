@@ -1,0 +1,66 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  background:radial-gradient(circle,rgb(2, 109, 2),white,rgb(248, 166, 15));
+}
+.loginform{
+  align-items: center;
+  background-color: white;
+  padding: 6%;
+  border: 2px solid rgb(248, 166, 15);
+  border-radius: 30px;
+  text-align: center;
+}
+h2{
+  font-weight: bold;
+  margin-top: -50px;
+}
+.mains{ 
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+hr{
+  margin-bottom: 40px;
+}
+input{
+  padding: 6px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 7px;
+  border-color: black;
+}
+select{
+  padding: 6px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  text-align: center;
+  border-radius: 7px;
+  border-color: black;
+  border: 2px solid black;
+
+}
+button{
+  padding: 10px;
+  margin-top: 25px;
+  border-radius: 10px;
+  border-color: black;
+  font-weight: bold;
+}
+button:hover{
+  background-color: rgb(248, 166, 15);
+  transition: ease-in-out 0.25s;
+  font-weight: bold;
+}
+label{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  
+}
+.Labels{
+  text-align: left;
+}

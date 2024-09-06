@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>
+      Registration Page
+    </title>
+    <link rel="stylesheet" href="reg.css">
+  </head>
+  <body>
+    <div class="loginform">
+    <div class="classss"><h2>Registration Form</h2></div>
+    <hr>
+    <div class="mains">
+      <div class="FirstName">
+        <label class="Labels">First Name</label>
+        <br>
+        <input type="text" >
+      </div>
+      <div class="lastname"><label class="Labels">Last Name</label><br>
+        <input type="text" ></div>
+        <div class="Email">
+          <label>Email</label>
+          <br>
+          <input type="email" id="email" placeholder="Please Enter Email">
+        </div>
+        <div class="Email">
+          <label>Phone</label>
+          <br>
+          <input type="tel" >
+        </div>
+        <div class="password">
+          <label>Password</label>
+          <br>
+          <input type="password" id="password" placeholder="Enter your Password" >
+        </div>
+        <div class="password">
+          <label>Re-Enter Password</label>
+          <br>
+          <input type="password" id="repassword" placeholder="Reenter your Password">
+        </div>
+        <div class="dob">
+          <label for="DOB">DOB</label>
+          <br>
+          <input type="date">
+        </div>
+        <div class="Nationality">
+          <label for="Nationality">Nationality</label>
+          <br>
+          <select name="Nationality" id="Nationality">
+            <option value="Indian">Indian</option>
+            <option value="Nigerian">Nigerian</option>
+            <option value="African">African</option>
+            <option value="Japanese">Japanese</option>
+            <option value="British">British</option>
+          </select>
+        </div>
+    </div>
+    <div class="Gender">
+      <p style="font-size: 22px; font-weight: bold;margin-bottom: -1px;">Gender</p>
+      <input type="radio" class="Gender" value="Male"></input>
+      <label for="Gender" class="Gender">Male</label>
+      <input type="radio" class="Gender" value="Female"></input>
+      <label for="Gender" class="Gender">Female</label>
+      <input type="radio" class="Gender" value="Other"></input>
+      <label for="Gender" class="Gender">Other</label>
+    </div>
+    <div class="remember" style="margin-top: 15px;">
+      <input type="radio" class="Remember" value="True"></input>
+      <label for="Remember" class="remember">Remember Me</label>
+    </div>
+    <div class="submit">
+      <button id="submitBtn">Submit</button>
+    </div>
+    </div>
+    
+  </body>
+  <script>
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    document
+      .getElementById("submitBtn")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const repassword=document.getElementById("repassword").value;
+
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+
+        if (!passwordRegex.test(password)) {
+          alert(
+            "Password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, a number, and a special character."
+          );
+          return;
+        }
+        if (password!=repassword){
+          alert(
+            "Make sure both the passwords Entered are same."
+          );
+          return;
+        }
+
+        alert("Registration Successfully Completed.");
+      });
+  </script>
+</html>
