@@ -1,0 +1,81 @@
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Timer Container */
+.timer {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.time-display {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2ecc71; /* Green for the timer */
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-stop-btn {
+  background-color: #3498db; /* Blue for start/stop */
+  color: white;
+}
+
+.start-stop-btn:hover {
+  background-color: #2980b9;
+}
+
+.reset-btn {
+  background-color: #e74c3c; /* Red for reset */
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #c0392b;
+}
+
+button:focus {
+  outline: none;
+}
