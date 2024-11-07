@@ -12,7 +12,7 @@ const posts = [
     password: "AHVA@2005"
   },
   {
-    name: "Vrits",
+    name: "EndoEmo",
     title: "Crazyy Kadaaa!",
     password: "NONE@2004"
   }
